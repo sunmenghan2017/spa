@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>goto dialg的测试页面</title>
+  <link rel = "stylesheet" href='./dlg-goto.css'>
+</head>
+<body>
+  <input id="popup" type="button" value="弹出转到对话框"/>
+  <input id="popup2" type="button" value="弹出对话框"/>
+  <br>
+  <div id="main">
+  </div>
+  </div>  
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="./dlg-goto.js"></script>
+  <script>
+    $(function(){
+      var $btnDlg = $('#popup');
+      $btnDlg.click(function(){
+        $dlgGoto.show({
+          container:'#main',
+          })
+      })
+    })
+  </script>
+</body>
+</html>

@@ -2,27 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>goto dialg的测试页面</title>
-  <link rel = "stylesheet" href='./dlg-goto.css'>
+  <title>goto dialog测试页面</title>
+  <link rel="stylesheet" href="dlg-goto.css">
+  <link rel="icon" href="https://i.wangding.in/favicon.ico" sizes="48x48" type="image/png">
 </head>
 <body>
-  <input id="popup" type="button" value="弹出转到对话框"/>
-  <input id="popup2" type="button" value="弹出对话框"/>
-  <br>
-  <div id="main">
-  </div>
-  </div>  
-  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="./dlg-goto.js"></script>
-  <script>
-    $(function(){
-      var $btnDlg = $('#popup');
-      $btnDlg.click(function(){
-        $dlgGoto.show({
-          container:'#main',
-          })
-      })
-    })
-  </script>
+<div class="test">
+  <input type="button" value="弹出对话框" autofocus>
+</div>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="dlg-goto.js"></script>
+<script>
+$(function() {
+  var $btnTest = $('div.test>input[type="button"]');
+
+  $btnTest.click(function() {
+    $dlgGoto.show({
+      lineNum: 4,
+      totalLine: 5,
+      gotoHandler: function(lines) {
+        console.log("goto btn click! GOTO %s lines.", lines);
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>

@@ -30,19 +30,11 @@
   height:30px;
 }
 
-.notepad-dlg-goto .main{
-  background-color:#f0f0f0;
-  box-sizing:border-box;
-  height:127px;
-  padding:12px;
-  position:relative;
-  
-}
-
 .notepad-dlg-goto .title{
   left:10px;
   line-height:30px;
   position:absolute;
+  margin:0;
 }
 .notepad-dlg-goto .close-btn{
   color:gray;
@@ -52,7 +44,15 @@
   text-align:center;
   width:30px
 }
-
+.notepad-dlg-goto .main{
+  background-color:#f0f0f0;
+  box-sizing:border-box;
+  height:127px;
+  padding:12px;
+  position:relative;
+  margin-top: 30px;
+  
+}
 .notepad-dlg-goto .txt-line-num{
   box-sizing:border-box;
   height:30px;

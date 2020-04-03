@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查找对话框</title>
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/dlg-common.css">
+    <link rel="stylesheet" href="dlg-search.css">
+</head>
+
+<body>
+    <input type="button" value="弹出对话框" />
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="dlg-search.js"></script>
+    <script>
+        $(function () {
+            var $btnTest = $('input');
+            $btnTest.click(function () {
+                $dlgSearch.show(function (content) {
+                    console.log('search btn click!');
+                    console.log(content)
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
